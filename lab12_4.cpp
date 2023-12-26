@@ -1,6 +1,8 @@
 #include<iostream>
 
 using namespace std;
+template <typename T>
+void mySwap(T &,T &);
 
 int main(){
 	int x, y;
@@ -30,3 +32,10 @@ int main(){
 	return 0;
 }
 
+template <typename T>
+void mySwap(T &x,T &y){ // ใช้ void เพราะ มัน return หลายค่าไม่ได้ เราต้องการ 2 ค่า ถ้าใช้ return มันได้ค่าเดียว เลยใช้ void เพื่อแก้ปัญหานี้
+    T z = x;
+	x=y;
+	y=z;
+	
+} 
